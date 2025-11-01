@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=67", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "alpha-1000"
+version = "0.1.0"
+description = "Engine and tools for the Alpha-1000 Tysiąc project."
+requires-python = ">=3.9"
+authors = [{name = "Alpha1000"}]
+dependencies = [
+    "pydantic>=2.6,<3.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.4",
+]
+rl = [
+    "torch>=2.1",
+    "numpy>=1.24",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.setuptools.packages.find]
+include = ["engine*", "bots*", "ui*", "rl*"]

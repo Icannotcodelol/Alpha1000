@@ -1,0 +1,32 @@
+deck_ranks:
+  - nine
+  - jack
+  - queen
+  - king
+  - ten
+  - ace
+deck_suits:
+  - spades
+  - clubs
+  - diamonds
+  - hearts
+card_points:
+  nine: 0
+  jack: 2
+  queen: 3
+  king: 4
+  ten: 10
+  ace: 11
+meld_points:
+  spades: 40
+  clubs: 60
+  diamonds: 80
+  hearts: 100
+musik:
+  return_destination: unused_musik
+melds:
+  trump_overrides: true
+  allow_one_per_suit: true
+scoring:
+  last_trick_bonus: 0
+  overshoot_behavior: none
